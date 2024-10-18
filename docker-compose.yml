@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./reactapp
+      dockerfile: Dockerfile
+    image: manuja318/reactapp-frontend:v1.0
+    ports:
+      - "3000:80"
+    networks:
+      - app-network
+
+  backend:
+    build:
+      context: ./reactapp-backend
+      dockerfile: Dockerfile
+    image: manuja318/reactapp-backend:v1.0
+    ports:
+      - "3001:3001"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
