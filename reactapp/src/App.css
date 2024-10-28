@@ -1,24 +1,56 @@
 .App {
   text-align: center;
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  overflow: hidden;
 }
 
-.users-button{
-  font-size: 20px;
-  padding: 20px 40px;
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.App-header {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.users-button {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px 30px;
   border: none;
-  border-radius: 10px;
-  background-color: white;
+  border-radius: 8px;
+  background-color: #4355BE;
+  color: white;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.users-button:hover {
+  background-color: #3644A0;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
